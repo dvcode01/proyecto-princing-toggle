@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+:root{
+    --Linear-Gradient: hsl(236, 72%, 79%);
+    --Linear-Gradient-2: hsl(237, 63%, 64%);
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+body{
+	font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../assets/svg/bg-top.svg'), url('../assets/svg/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    background-size: 17rem, 28rem;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+/* ESTILOS GENERALES */
+.container{
+    margin: 7rem auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* CONTENEDOR O CONTAINER */
+.container__title{
+    margin: 0 auto 3.6rem;
+    color: var(--Grayish-Blue);
+}
+/* TOOGLE  */
+.container__pricing{
+    width: 24rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7.4rem;
+}
+.container__toggle{
+    width: 6rem;
+    height: 3.4rem;
+    border-radius: 10rem;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--Linear-Gradient-2);
+}
+.container__toggle::after{
+    content: '';
+    width: 2.6rem;
+    height: 2.6rem;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 50%;
+    transition: 300ms all;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.container__toggle.active::after{
+    left: 4px;
+    right: unset;
+}
+.container__monthly, .container__annually{
+    color: var(--Light-Grayish-Blue);
+}
+/* CARDS */
+.card{
+    min-width: 33rem;
+    min-height: 45rem;
+    margin-bottom: 3.4rem;
+    padding: 3.6rem 3rem 3rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    background-color: #fff;
+}
+.card--1, .card--3{
+    box-shadow: 4px 5px 5px rgba(179, 181, 198, .3);
+}
+.card--3{
+    margin-bottom: 0;
+}
+.card__title{
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--Grayish-Blue);
+}
+.card__price{
+    margin: 4rem 0;
+    display: flex;
+    color: var(--Dark-Grayish-Blue);
+    justify-content: center;
+    align-items: center;
+}
+.card__number{
+    font-size: 5.8rem;
+    margin-left: .6rem;
+}
+.card__symbol{
+    font-size: 3.6rem;
+}
+.card__info{
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    margin-bottom: 3.3rem;
+}
+.card__paragraph{
+    padding: 2rem;
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+.card__text{
+    margin: 0;
+    color: var(--Grayish-Blue);
+}
+.card__button{
+    width: 100%;
+    height: 4.4rem;
+    border: 0;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    transition: 300ms all;
+    background-image: linear-gradient(to right, var(--Linear-Gradient), var(--Linear-Gradient-2));
+    color: #fff;
+    cursor: pointer;
+}
+.card__button:hover{
+    color: var(--Grayish-Blue);
+    border: 1px solid var(--Dark-Grayish-Blue);
+    background-image: none;
+    background-color: transparent;
+}
+.card--special{
+    background-image: linear-gradient(var(--Linear-Gradient), var(--Linear-Gradient-2));
+}
+.card--special .card__title, .card--special .card__text, 
+.card--special .card__price{
+    color: #fff ; 
+}
+.card__button--special{
+    color: var(--Linear-Gradient-2);
+    background-image: none;
+    background-color: #fff;
+}
+.card__button--special:hover{
+    color: #fff; 
+    border: 1px solid #fff;
+}
+.attribution{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.attribution a{
+    color: var(--Linear-Gradient-2);
+}
+@media (min-width: 768px){
+    body{
+        background-size: 29rem, 28rem;
+    }
+    .cards{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        width: 35rem;
+        margin-bottom: 0;
+    }
+    .card--1{
+        border-radius: 1.5rem 0 0 1.5rem;
+        box-shadow: -4px 5px 5px rgba(179, 181, 198, .3);
+    }
+    .card--3{
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+    .card--special{
+        min-height: 50rem;
+        padding: 6rem 3rem;
+    }
+}

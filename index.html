@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing component toggle | Frontend mentor</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="shortcut icon" sizes="32" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/bundle/app.bundle.js"></script>
+</head>
+<body>
+    <main class="container">
+        <!-- TITLE -->
+        <h1 class="container__title">Our Pricing</h1>
+
+        <!-- TOGGLE -->
+        <section class="container__pricing">
+            <p class="container__annually">Annually</p>
+            <div class="container__toggle"></div>
+            <p class="container__monthly">Monthly</p>
+        </section>
+
+        <!-- CARD CONTAINER -->
+        <section class="cards">
+            <!-- CARD -->
+            <article class="card card--1">
+                <h2 class="card__title">Basic</h2>
+                <div class="card__price">
+                    <span class="card__symbol">$</span>
+                    <span class="card__number" id="price1">19.99</span>
+                </div>
+                <section class="card__info">
+                    <div class="card__paragraph">
+                        <p class="card__text">500 GB Storage</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">2 Users Alloweb</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">Send up to 3 GB</p>
+                    </div>
+                </section>
+                <button class="card__button">Learn More</button>
+            </article>
+
+            <!-- CARD -->
+            <article class="card card--special">
+                <h2 class="card__title">Professional</h2>
+                <div class="card__price">
+                    <span class="card__symbol">$</span>
+                    <span class="card__number" id="price2">24.99</span>
+                </div>
+                <section class="card__info">
+                    <div class="card__paragraph">
+                        <p class="card__text">1 TB Storage</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">5 Users Alloweb</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">Send up to 10 GB</p>
+                    </div>
+                </section>
+                <button class="card__button card__button--special">Learn More</button>
+            </article>
+
+            <!-- CARD -->
+            <article class="card card--3">
+                <h2 class="card__title">Master</h2>
+                <div class="card__price">
+                    <span class="card__symbol">$</span>
+                    <span class="card__number" id="price3">39.99</span>
+                </div>
+                <section class="card__info">
+                    <div class="card__paragraph">
+                        <p class="card__text">2 TB Storage</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">10 Users Alloweb</p>
+                    </div>
+                    <div class="card__paragraph">
+                        <p class="card__text">Send up to 20 GB</p>
+                    </div>
+                </section>
+                <button class="card__button">Learn More</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="attribution">
+        Challenge by 
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        . Coded by
+        <a href="https://github.com/dvcode01" target="_blank">David Olivero</a>
+    </footer>
+</body>
+</html>
